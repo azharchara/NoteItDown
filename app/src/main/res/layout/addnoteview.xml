@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorList">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#26c6da"
+        android:minHeight="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:background="#00aaaaaa"
+            android:layout_gravity="right"
+            android:layout_height="match_parent">
+
+            <Button
+                android:text="Save"
+                android:layout_width="wrap_content"
+                android:background="#26c6da"
+                android:textColor="#000"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:id="@+id/saveButton"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/title_addnote"
+        android:background="@color/colorList"
+        android:hint="Title"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_weight="1"
+        android:textSize="25sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#000000">
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/content_addnote"
+        android:background="@color/colorList"
+        android:hint="Task"
+        android:textColor="#000000"
+        android:gravity="top|left"
+        android:layout_weight="8"
+        android:layout_marginTop="2dp"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#000000">
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorList"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/dateTextView"
+            android:background="@color/colorList"
+            android:layout_weight="5"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_calendar"
+            android:id="@+id/calendarButton" />
+
+    </LinearLayout>
+
+</LinearLayout>
