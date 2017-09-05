@@ -33,7 +33,6 @@ public class AddNoteActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.addnoteview);
-
         //Initializations
         final Bundle extras = getIntent().getExtras();
         myCalendar = Calendar.getInstance();
@@ -66,11 +65,15 @@ public class AddNoteActivity extends Activity {
                         note.setDate(dateText.getText().toString());
                         note.save();
                     } else {
-                        noteList.get(extras.getInt("position")).setTitle(titleText.getText().toString());
-                        noteList.get(extras.getInt("position")).setContent(contentText.getText().toString());
-                        noteList.get(extras.getInt("position")).setDate(dateText.getText().toString());
-                        noteList.get(extras.getInt("position")).save();
+                            noteList.get(extras.getInt("position")).setTitle(titleText.getText().toString());
+                            noteList.get(extras.getInt("position")).setContent(contentText.getText().toString());
+                            noteList.get(extras.getInt("position")).setDate(dateText.getText().toString());
+                            noteList.get(extras.getInt("position")).save();
                     }
+                }
+                else
+                {
+                    noteList.get(extras.getInt("position")).delete();
                 }
                 setResult(RESULT_OK);
                 finish();

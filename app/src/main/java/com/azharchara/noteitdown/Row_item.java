@@ -56,14 +56,36 @@ public class Row_item extends BaseAdapter {
             vi = inflater.inflate(R.layout.row_item, null);
 
         TextView titleText = (TextView) vi.findViewById(R.id.title);
-        titleText.setText(title.get(position));
+        if(title.get(position).length() > 0){
+            titleText.setText(title.get(position));
+            titleText.setVisibility(View.VISIBLE);
+        }
+        else{
+            titleText.setVisibility(View.GONE);
+        }
 
         TextView contentText = (TextView) vi.findViewById(R.id.content);
-        contentText.setText(content.get(position));
+        if(content.get(position).length() > 0) {
+            contentText.setText(content.get(position));
+            contentText.setVisibility(View.VISIBLE);
+        }
+        else{
+            contentText.setVisibility(View.GONE);
+        }
 
         TextView dateText = (TextView) vi.findViewById(R.id.date);
-        dateText.setText(date.get(position));
+        TextView datelabel = (TextView)vi.findViewById(R.id.dateLabel);
+        if(date.get(position).length() > 0) {
+            dateText.setText(date.get(position));
+            dateText.setVisibility(View.VISIBLE);
+            datelabel.setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            dateText.setVisibility(View.GONE);
+            datelabel.setVisibility(View.GONE);
 
+        }
         return vi;
     }
 }
